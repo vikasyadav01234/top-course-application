@@ -1,7 +1,10 @@
 import React from "react";
+import Card from './Card';
 
 const Cards = ({courses}) => {
     let allCourses = [];
+
+    //it returns you a list of all courses recived from the api response
     const getCourses = () => {
         Object.values(courses).forEach((courseCategory) => {
             courseCategory.forEach((course) => {
@@ -12,7 +15,11 @@ const Cards = ({courses}) => {
     }
     return (
         <div>
-
+        {
+            getCourses().map((course)=>{
+                <Card/>
+            })
+        }
         </div>
     )
 }
