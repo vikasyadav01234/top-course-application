@@ -6,14 +6,14 @@ import Cards from "./components/Cards";
 import { toast } from "react-toastify";
 const App = () => {
   
- // const [courses, setCourses] = useState
+  const [courses, setCourses] = useState(null)
   useEffect ( ()=>{
     const fetchData = async() =>{
       try{
         const res =await fetch(apiUrl);
         const data = await res.json();
         //save data into a variable
-        console.log(data);
+        setCourses(data.data)
       }
       catch(error){
         toast.error("Something went wrong");
