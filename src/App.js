@@ -11,9 +11,9 @@ const App = () => {
     const fetchData = async() =>{
       try{
         const res =await fetch(apiUrl);
-        const data = await res.json();
+        const output = await res.json();
         //save data into a variable
-        setCourses(data.data)
+        setCourses(output.data);
       }
       catch(error){
         toast.error("Something went wrong");
