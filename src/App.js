@@ -26,10 +26,19 @@ const App = () => {
   },[]);
   return (
     <div>
+      <div>
       <Navbar/>
+      </div>
+      
+      <div>
       <Filter
         filterData = {filterData}
       />
+      </div>
+      <div>
+        {loading?(<Spinner/>):(<Cards/>)}
+      </div>
+            
 
       <Cards courses={courses}/>
     </div>
