@@ -8,7 +8,7 @@ const Card = () => {
 
                 <div>
                     <button>
-                        
+                        <FcLike fontSize="1.75rem" />
                     </button>
                 </div>
             </div>
