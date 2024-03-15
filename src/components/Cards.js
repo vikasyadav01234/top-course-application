@@ -17,7 +17,7 @@ const Cards = ({courses}) => {
         <div>
         {
             getCourses().map((course)=>{
-                <Card/>
+                <Card course={course}/>
             })
         }
         </div>
