@@ -7,8 +7,10 @@ import { toast } from "react-toastify";
 const App = () => {
   
   const [courses, setCourses] = useState(null)
+  const [loading, setLoading] = useState(true)
   useEffect ( ()=>{
     const fetchData = async() =>{
+      setLoading(true)
       try{
         const res =await fetch(apiUrl);
         const output = await res.json();
@@ -18,6 +20,7 @@ const App = () => {
       catch(error){
         toast.error("Something went wrong");
       }
+      setLoading(false)
     }
     fetchData();
   },[]);
