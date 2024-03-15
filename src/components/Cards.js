@@ -11,13 +11,13 @@ const Cards = ({courses}) => {
                 allCourses.push(course);
             })
         })
-        return allCourses;
+        //return allCourses;
     }
     return (
         <div>
         {
-            getCourses().map((course)=>{
-                <Card course={course}/>
+            allCourses.map((course)=>{
+              return <Card course={course}/>
             })
         }
         </div>
