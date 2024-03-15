@@ -6,9 +6,9 @@ import Cards from "./components/Cards";
 import { toast } from "react-toastify";
 const App = () => {
   
-  const [courses, setCourses] = useState
+ // const [courses, setCourses] = useState
   useEffect ( ()=>{
-    //const fetchData = async() =>{
+    const fetchData = async() =>{
       try{
         const res =await fetch(apiUrl);
         const data = await res.json();
