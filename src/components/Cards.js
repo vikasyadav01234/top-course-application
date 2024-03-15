@@ -15,11 +15,14 @@ const Cards = ({courses}) => {
     }
     return (
         <div>
-        {
-            getCourses().map((course)=>{
+        {!courses ? (
+            <div>
+                <p>No Data Found</p>
+            </div>
+        ):( getCourses().map((course)=>{
               return <Card key={course.id} course={course}/>
-            })
-        }
+            }))}
+        
         </div>
     )
 }
