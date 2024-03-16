@@ -4,6 +4,7 @@ import { apiUrl,filterData} from "./data";
 import Filter from "./components/Filter";
 import Cards from "./components/Cards";
 import { toast } from "react-toastify";
+import Spinner from "./components/Spinner"
 const App = () => {
   
   const [courses, setCourses] = useState(null)
